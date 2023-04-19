@@ -2,7 +2,7 @@
  * @Author: lbh
  * @Date: 2020-12-24 18:12:01
  * @LastEditors: lzh
- * @LastEditTime: 2023-04-19 15:35:07
+ * @LastEditTime: 2023-04-19 16:54:42
  * @Description: axios 二次封裝
  */
 import axios from 'axios';
@@ -36,6 +36,17 @@ axios.interceptors.request.use(
 );
 
 let https = {
+  host () {
+    let host = location.origin;
+    if (location.href.indexOf("shop9") > -1) {
+      if (process.env.NODE_ENV_T == "shop9_m") {
+        return host;
+      } else if (process.env.NODE_ENV_T == "shop9_test") {
+        return host;
+      } else host = "https://prf-m.ricepon.com";
+    }
+    return host;
+  },
   /**
    * 獲取 頭部信息
    */
@@ -50,6 +61,7 @@ let https = {
           mobileVersion: md.os() + md.version(md.userAgent()), // 系统版本  如 ios11
           product: md.mobile(), // 手机型号(名称)
           ver: md.os() + md.version(md.userAgent()), // 系统版本  如 ios11
+          appToken:"20",
         };
         if (typeof object == 'object') {
           if (object.origin) headers['Access-Control-Allow-Origin'] = '*';
@@ -198,7 +210,12 @@ let default_ = {
   axios: axios,
 };
 
+
+
+// export const axios_ = axios;
+// export const setting = default_;
+
 export default {
-  axios: https,
+  axios_: https,
   setting: default_,
 };
