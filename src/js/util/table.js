@@ -1,10 +1,3 @@
-/*
- * @Author: lbh
- * @Date: 2022-12-03 17:35:36
- * @LastEditors: lzh
- * @LastEditTime: 2023-04-19 16:15:27
- * @Description: file content
- */
 // in db_student_config.js
 
 export default {

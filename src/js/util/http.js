@@ -1,10 +1,3 @@
-/*
- * @Author: lbh
- * @Date: 2020-12-24 18:12:01
- * @LastEditors: lzh
- * @LastEditTime: 2023-04-19 16:54:42
- * @Description: axios 二次封裝
- */
 import axios from 'axios';
 import qs from 'qs';
 import MobileDetect from 'mobile-detect';

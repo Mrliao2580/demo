@@ -1,10 +1,3 @@
-/*
- * @Author: lbh
- * @Date: 2021-05-21 11:54:01
- * @LastEditors: lbh
- * @LastEditTime: 2023-02-22 09:17:16
- * @Description: file content
- */
 import CryptoJS from 'crypto-js';
 
 export default {

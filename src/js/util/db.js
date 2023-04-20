@@ -1,10 +1,3 @@
-/*
- * @Author: lbh
- * @Date: 2023-03-08 12:11:34
- * @LastEditors: lzh
- * @LastEditTime: 2023-04-19 15:36:02
- * @Description: file content
- */
 import Idb from 'idb-js'; //  引入Idb
 import table_config from './table'; //  引入数据库配置
 
